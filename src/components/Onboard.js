@@ -24,14 +24,13 @@ function Onboard({ user, accounts, linking, location }) {
         <div>
           <img src={ATM} alt="ATM" />
           <h2>How it works:</h2>
-          <p className="onboard-text">Just link one of your bank accounts or credit cards to Good Cents....and let the savings being! </p>
+          <p className="onboard-text">When you make a purchase, we'll tally your change to the nearest dollar and deposit your spare change into a digital piggy bank.</p>
 
         </div>
         <div>
           <img src={ATM} alt="ATM" />
           <h2>How it works:</h2>
-          <p className="onboard-text">When you make a purchase, we'll tally your change to the nearest dollar and deposit your spare change into a digital piggy bank.</p>
-          <p className="onboard-text">When you hit the $10 minimum savings, cash out or save more!</p>
+          <p className="onboard-text">Just link one of your bank accounts or credit cards to Good Cents....and let the savings begin! Cash out or donate to one of our partner charities whenever you want.</p>
         </div>
         <div>
           <img src={WithYou} alt="WithYou" />
