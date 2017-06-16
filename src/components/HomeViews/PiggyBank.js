@@ -3,21 +3,21 @@ import { connect } from 'react-redux';
 var ProgressBar = require('progressbar.js');
 
 class PiggyBank extends Component {
-  compnentDidMount() {
+  componentDidMount() {
     const { transactions, piggybank } = this.props;
-    if (transactions && transactions.length) {
-      this.drawProgessBar(piggybank);
-    }
+    const amount = (transactions && transactions.length) ? piggybank : 0;
+    this.drawProgessBar(amount);
   }
 
-  componentWillReceiveProps({ transactions, piggybank}) {
+  componentWillReceiveProps({ transactions, piggybank }) {
     if (transactions && transactions !== this.props.transactions && transactions.length) {
       this.drawProgessBar(piggybank);
     }
   }
 
   drawProgessBar(piggybank) {
-    var bar = new ProgressBar.Circle('#container', {
+    if (this.bar) this.bar.destroy();
+    const bar = this.bar = new ProgressBar.Circle('#container', {
       color: '#0d97ff',
       // This has to be the same size as the maximum width to prevent clipping
       strokeWidth: 20,

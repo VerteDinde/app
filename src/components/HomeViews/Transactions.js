@@ -5,10 +5,11 @@ import { getTransactions } from '../Plaid/actions';
 import Transaction from './Transaction';
 
 class Transactions extends Component {
-  constructor () {
+  constructor() {
     super();
     this.transactions = this.transactions.bind(this);
   }
+
   transactions() {
     this.props.getTransactions(this.props.user.plaid.access_token);
   }
